@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9e9dc"><title>岳陽樓記 · 洞庭三境</title>
+<meta name="description" content="第一人稱探索岳陽樓，觀察三境物件、解開場景謎題及課文問答。">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./three.module.js"}}</script>
+</head>
+<body>
+<main id="experience" aria-label="可自由環繞的岳陽樓三維場景"></main>
+<div id="loading"><div class="loading-seal">岳</div><p>一樓 · 三境</p><span>正在構築洞庭山水</span></div>
+<header>
+ <div class="brand"><div class="eyebrow">洞庭三境 · INTERACTIVE STUDY</div><h1>岳陽樓記<span>范仲淹</span></h1></div>
+ <nav id="weather" aria-label="切換課文意境">
+  <button data-mode="sun" aria-pressed="true" class="selected"><span class="weather-icon">☀</span><span>春和景明<small>春日</small></span></button>
+  <button data-mode="rain" aria-pressed="false"><span class="weather-icon">☂</span><span>霪雨霏霏<small>陰雨</small></span></button>
+  <button data-mode="moon" aria-pressed="false"><span class="weather-icon">☾</span><span>皓月千里<small>月夜</small></span></button>
+ </nav>
+ <div class="top-tools"><button class="round" id="settings-btn" aria-label="畫質與聲音設定" title="設定">⚙</button><button class="round" id="info-btn" aria-label="關於場景" title="關於場景">i</button></div>
+</header>
+<div class="scene-caption"><span class="caption-line"></span><span id="scene-caption">春日 · 水天一色</span></div>
+<aside class="poem-panel" id="poem-panel">
+ <div class="panel-top"><span id="poem-kicker">01 / 春和景明</span><button id="fold-poem" aria-label="收起原文" aria-expanded="true">−</button></div>
+ <div class="poem-body"><p class="poem" id="poem">春和景明，波瀾不驚。<br>上下天光，一碧萬頃。</p><p class="interpretation" id="interpretation">晴光映水，遠近澄明。從樓上望向洞庭，感受遷客騷人眼中的開闊與舒暢。</p><div class="poem-foot"><span id="mood">心曠神怡</span><button id="annotations" aria-pressed="false">顯示景物解說 ↗</button></div></div>
+</aside>
+<aside id="views" class="views"><span class="tool-label">觀景位置</span><div class="view-grid"><button data-view="overview" class="active">全樓環繞</button><button data-view="roof">盔頂近看</button><button data-view="balcony">樓上望湖</button><button data-view="lake">湖面望樓</button></div><div class="view-tools"><button id="auto" aria-pressed="false">↻ 自動環繞</button><button id="reset">⌾ 重設</button><button id="fullscreen" title="全螢幕">⛶</button></div></aside>
+<div class="interaction-help"><span>拖曳旋轉</span><i></i><span>雙指縮放與平移</span></div>
+<div class="hotspots" id="hotspots"></div>
+<div id="detail" class="detail" hidden><button id="detail-close" aria-label="關閉解說">×</button><span id="detail-tag"></span><h2 id="detail-title"></h2><p id="detail-text"></p></div>
+<dialog id="settings"><button class="dialog-close" data-close="settings" aria-label="關閉設定">×</button><div class="eyebrow">觀景設定</div><h2>看得清，也聽得見</h2><label>畫面品質<select id="quality"><option value="standard">標準 · 較流暢</option><option value="high">高畫質 · 更多細節</option></select></label><label>畫面亮度<input id="brightness" type="range" min="0.7" max="1.5" step="0.05" value="1"></label><label class="switch-row">環境聲音<button id="sound" aria-pressed="false">開啟</button></label><label>音量<input id="volume" type="range" min="0" max="1" step="0.05" value="0.35"></label><p class="fine">聲音由風雨與水聲合成，點選後才會啟動。</p></dialog>
+<dialog id="info"><button class="dialog-close" data-close="info" aria-label="關閉介紹">×</button><div class="eyebrow">關於這個場景</div><h2>一座樓，三種覽物之情</h2><p>按「開始第一人稱探索」步行尋物。電腦以 WASD／方向鍵移動、拖曳轉頭；觸控用左下方向鍵。樓前中央入口可按「登樓／下樓」，以教學轉場到圍廊。依手札觀察物件，再完成解謎及問答。進度保存在本機瀏覽器。步行到景物附近才會顯示標籤。沿湖的石階觀察位可以俯看游魚；人物對話可逐項追問。</p><p>建築採現存岳陽樓的可辨識形制，景物按課文作藝術重構，並非北宋原樓的考古復原。遷客、騷人、商旅與漁人為虛構教學角色；虎猿位置及可見形態為示意，人物與動物造型仍屬初版。詩文展示及周邊配置為示意。</p><p>第三、四段寫作者設想的登樓所見所感。遷客騷人的悲喜與末段古仁人的憂樂觀，仍須分辨。</p><p><a class="model-download" href="yueyang-pavilion.glb" download="岳陽樓模型.glb">↓ 下載岳陽樓 3D 模型 GLB</a></p><p class="fine">模型檔包含樓體及材質；天候動畫在網頁中運作。觸控支援拖曳、雙指縮放與平移；尚未在 iPad 實機測試。</p></dialog>
+<div id="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body></html>
