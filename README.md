@@ -23,3 +23,7 @@ index.html、JavaScript、CSS、Three.js 模組和 GLB 模型須一起保留。�
 需要支援 WebGL 的瀏覽器；尚未在 iPad 實機完成驗證。Google Fonts 無法連線時會使用系統字體。
 
 Three.js MIT 授權見 LICENSE-THREE.txt。
+
+## 獨立模型室
+
+開啟 [models.html](./models.html)，切換老虎與遷客，拖曳旋轉、縮放，檢查正側背面、臉與手／足掌。支援自動旋轉、網格檢視及 GLB 下載。此頁是尚待雕塑提升的可互動初版，未整合到主遊戲。製作與授權見 [MODEL_NOTES.md](./MODEL_NOTES.md)，實測結果見 [TEST_RESULTS.md](./TEST_RESULTS.md)。
