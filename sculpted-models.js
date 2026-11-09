@@ -113,9 +113,9 @@ export async function buildScholar(){
  // Sleeves hang from shoulders, down toward wrist; broad bottom hangs below hand.
  for(const s of [-1,1]){
  ringSurface(g,[[.65,.065,.078,s*.39,.035],[.71,.105,.10,s*.40,.025],[.82,.142,.114,s*.38,.012],[1.00,.15,.12,s*.33,0],[1.19,.138,.114,s*.28,0],[1.34,.10,.10,s*.22,0],[1.395,.063,.074,s*.175,0]],cloth,'垂墜寬袖',.003,80);
- ringSurface(g,[[.718,.084,.095,s*.405,.04],[.76,.091,.10,s*.40,.04],[.82,.082,.091,s*.395,.04]],lining,'袖口內襯',.002,64);
+ ringSurface(g,[[.718,.055,.055,s*.405,.04],[.76,.06,.06,s*.40,.04],[.82,.055,.055,s*.395,.04]],lining,'袖口內襯',.002,64);
  // Palm with thenar mound, knuckles, five separately articulated fingers.
- const hand=new T.Group();hand.position.set(s*.415,.805,.095);hand.rotation.z=s*.10;g.add(hand);hand.name='五指手掌';
+ const hand=new T.Group();hand.position.set(s*.415,.805,.205);hand.rotation.z=s*.10;g.add(hand);hand.name='五指手掌';
  ell(hand,[0,-.038,0],[.035,.057,.019],skin,'掌心');ell(hand,[-s*.022,-.04,.009],[.016,.031,.014],skin,'拇指球');
  for(let i=0;i<4;i++){const x=(i-1.5)*.0175,L=[.067,.083,.079,.060][i],top=-.071;const pts=[[x,top,0],[x+s*.002,top-L*.40,.007],[x+s*.004,top-L*.78,.018],[x+s*.003,top-L,.029]];tube(hand,pts,.0071-i*.0003,skin,'指節_'+i,18,8);ell(hand,[x,top+.002,0],[.009,.012,.016],skin,'掌指關節');ell(hand,[x+s*.003,top-L+.004,.034],[.0046,.009,.0013],material(0xbd9d88,.52),'指甲');for(const f of [.42,.75])tube(hand,[[x-.005,top-L*f,.015],[x,top-L*f-.001,.017],[x+.005,top-L*f,.015]],.00065,lip,'指節褶線',8,4);}
  tube(hand,[[-s*.025,-.025,.006],[-s*.042,-.043,.018],[-s*.048,-.064,.028],[-s*.038,-.082,.032]],.009,skin,'拇指',20,10);
